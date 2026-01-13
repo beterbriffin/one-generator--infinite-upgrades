@@ -259,8 +259,8 @@ function removeUpdatedFlags(){
 function getCurrencyPerSecond(){
   var r=game.generators;
   //If you think this multiplier should be in form (X*Y^Q)^P instead of current X^(P*Y^Q), DIY.
-  r=r.mul(ExpantaNum.pow(1.1,game.upgrades.strongerGenerators.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators17)).mul(ExpantaNum.pow(1.01,game.ascension.upgrades.strongerGenerators2))));
-  r=r.mul(ExpantaNum.pow(1.15,game.upgrades.strongerGenerators2.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators18))));
+  r=r.mul(ExpantaNum.pow(1.4,game.upgrades.strongerGenerators.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators17)).mul(ExpantaNum.pow(1.01,game.ascension.upgrades.strongerGenerators2))));
+  r=r.mul(ExpantaNum.pow(1.15,game.upgrades.strongerGenerators2.mul(ExpantaNum.pow(1.55,game.upgrades.strongerGenerators18))));
   r=r.mul(ExpantaNum.pow(1.3,game.upgrades.strongerGenerators3.mul(ExpantaNum.pow(1.07,game.upgrades.strongerGenerators5))));
   r=r.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators3.mul(game.upgrades.strongerGenerators4)));
   r=r.mul(ExpantaNum.pow(1.4,game.upgrades.strongerGenerators6.mul(ExpantaNum.pow(1.17,game.upgrades.strongerGenerators10.mul(ExpantaNum.pow(1.06,game.upgrades.strongerGenerators13))))));
