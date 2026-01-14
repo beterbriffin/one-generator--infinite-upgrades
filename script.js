@@ -259,7 +259,7 @@ function removeUpdatedFlags(){
 function getCurrencyPerSecond(){
   var r=game.generators;
   //If you think this multiplier should be in form (X*Y^Q)^P instead of current X^(P*Y^Q), DIY.
-  r=r.mul(ExpantaNum.pow(1.4,game.upgrades.strongerGenerators.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators17)).mul(ExpantaNum.pow(1.01,game.ascension.upgrades.strongerGenerators2))));
+  r=r.mul(ExpantaNum.pow(1.8,game.upgrades.strongerGenerators.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators17)).mul(ExpantaNum.pow(1.01,game.ascension.upgrades.strongerGenerators2))));
   r=r.mul(ExpantaNum.pow(1.15,game.upgrades.strongerGenerators2.mul(ExpantaNum.pow(1.55,game.upgrades.strongerGenerators18))));
   r=r.mul(ExpantaNum.pow(1.3,game.upgrades.strongerGenerators3.mul(ExpantaNum.pow(1.07,game.upgrades.strongerGenerators5))));
   r=r.mul(ExpantaNum.pow(1.05,game.upgrades.strongerGenerators3.mul(game.upgrades.strongerGenerators4)));
@@ -276,7 +276,7 @@ function getCurrencyPerSecond(){
   r=r.mul(ExpantaNum.pow(2.75,game.upgrades.strongerGenerators10.mul(game.upgrades.strongerGenerators16)));
   r=r.mul(ExpantaNum.pow(10,game.upgrades.strongerGenerators19.pow(5)));
   r=r.mul(ExpantaNum.pow(20,game.upgrades.strongerGenerators19.pow(ExpantaNum.TWO).mul(game.upgrades.strongerGenerators20.pow(4))));
-  r=r.mul(ExpantaNum.pow(3,game.ascension.upgrades.strongerGenerators));
+  r=r.mul(ExpantaNum.pow(8,game.ascension.upgrades.strongerGenerators));
   r=r.mul(ExpantaNum.pow(10,game.ascension.upgrades.strongerGenerators3));
   if (game.currency.gt(ExpantaNum.ONE)) r=r.mul(ExpantaNum.pow(game.currency,game.ascension.upgrades.strongerGenerators4.div(10)));
   return r;
@@ -595,13 +595,13 @@ function getUpgradeCostFactor(name){
     returnValue={
       type:"exponential",
       base:ExpantaNum.TWO.clone(),
-      exponent:ExpantaNum(2.5)
+      exponent:ExpantaNum(1.6)
     }
   }else if (name=="ascension.efficientPrestige"){
     returnValue={
       type:"exponential",
       base:ExpantaNum(5),
-      exponent:ExpantaNum(3)
+      exponent:ExpantaNum(2)
     }
   }else if (name=="ascension.strongerGenerators2"){
     returnValue={
