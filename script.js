@@ -373,7 +373,7 @@ function getUpgradeCostFactor(name){
       type:"doubleExponential",
       base:ExpantaNum(8e84),
       exponent:{
-        base:ExpantaNum(1.25),
+        base:ExpantaNum(1.21),
         exponent:ExpantaNum(2.1)
       }
     };
@@ -582,7 +582,7 @@ function getUpgradeCostFactor(name){
     }else{
       returnValue={
         type:"once",
-        cost:ExpantaNum("10^^20")
+        cost:ExpantaNum("10^^6")
       }
     }
   }else if (name=="ascension.strongerGenerators"){
@@ -595,13 +595,13 @@ function getUpgradeCostFactor(name){
     returnValue={
       type:"exponential",
       base:ExpantaNum.TWO.clone(),
-      exponent:ExpantaNum(1.6)
+      exponent:ExpantaNum(1.2)
     }
   }else if (name=="ascension.efficientPrestige"){
     returnValue={
       type:"exponential",
       base:ExpantaNum(5),
-      exponent:ExpantaNum(2)
+      exponent:ExpantaNum(1.75)
     }
   }else if (name=="ascension.strongerGenerators2"){
     returnValue={
